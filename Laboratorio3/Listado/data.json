@@ -1,14 +1,14 @@
 [
     {
-        "dec":"Terca",
+        "desc":"Tuerca",
         "cant":"12"
     },
     {
-        "dec":"Tornillo",
+        "desc":"Tornillo",
         "cant":"10"
     },
     {
-        "dec":"Martillo",
+        "desc":"Martillo",
         "cant":"130"
     }
 ]

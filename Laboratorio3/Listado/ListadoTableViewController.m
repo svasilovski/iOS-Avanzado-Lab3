@@ -12,7 +12,7 @@
 @interface ListadoTableViewController()
 @property NSUserDefaults *defaults;
 
-@property NSDictionary *dataDictionary;
+@property NSArray *dataDictionary;
 @end
 
 @implementation ListadoTableViewController
@@ -31,7 +31,7 @@
 }
 
 -(void)wirteJson{
-    self.dataDictionary = self.getContent;
+    self.dataDictionary = (NSArray *)self.getContent;
 }
 
 #pragma mark - Table view data source
@@ -43,16 +43,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return self.dataDictionary.count;
+    return [self.dataDictionary count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CeldaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"producto cell" forIndexPath:indexPath];
-    NSDictionary *dato = [self.dataDictionary objectForKeyedSubscript:indexPath];
-    //NSDictionary *dd = [NSJSONSerialization JSONObjectWithData:dato options:0 error:nil];
+    NSDictionary *datacell = [self.dataDictionary objectAtIndex:indexPath.row];
     
-    cell.descripcion = [dato objectForKey:@"desc"];
-    cell.cantidad = [dato objectForKey:@"cant"];
+    cell.descripcion = [datacell objectForKey:@"desc"];
+    cell.cantidad = [datacell objectForKey:@"cant"];
     return cell;
 }
 

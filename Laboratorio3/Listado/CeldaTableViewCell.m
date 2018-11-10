@@ -25,12 +25,9 @@
     [super setSelected:selected animated:animated];
 }
 
--(void)setValues:(NSString *)descripcion :(NSString *)cantidad {
-    _descripcion = descripcion;
-    _cantidad = cantidad;
-    
-    self.descripcionLabel.text = _cantidad;
-    self.cantidadLabel.text = _descripcion;
+- (void)setSelected:(BOOL)selected{
+    self.descripcionLabel.text = _descripcion;
+    self.cantidadLabel.text = _cantidad;
 }
 
 -(void)prepareForReuse{
