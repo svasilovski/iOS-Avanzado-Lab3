@@ -7,6 +7,7 @@
 //
 
 #import "ListadoTableViewController.h"
+#import "CeldaTableViewCell.h"
 
 @interface ListadoTableViewController()
 @property NSUserDefaults *defaults;
@@ -19,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.defaults =[NSUserDefaults standardUserDefaults];
+    self.wirteJson;
 }
 
 -(NSDictionary *)getContent{
@@ -46,11 +48,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CeldaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"producto cell" forIndexPath:indexPath];
-    NSString *dato = [self.dataDictionary objectForKeyedSubscript:indexPath];
-    NSDictionary *dd = [NSJSONSerialization JSONObjectWithData:dato options:0 error:nil];
-    NSString *desc = [dd objectForKey:@"description"];
+    NSDictionary *dato = [self.dataDictionary objectForKeyedSubscript:indexPath];
+    //NSDictionary *dd = [NSJSONSerialization JSONObjectWithData:dato options:0 error:nil];
     
-    
+    cell.descripcion = [dato objectForKey:@"desc"];
+    cell.cantidad = [dato objectForKey:@"cant"];
     return cell;
 }
 
