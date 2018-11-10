@@ -10,8 +10,7 @@
 #import "CeldaTableViewCell.h"
 
 @interface ListadoTableViewController()
-@property NSUserDefaults *defaults;
-
+//@property NSUserDefaults *defaults;
 @property NSArray *dataDictionary;
 @end
 
@@ -19,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.defaults =[NSUserDefaults standardUserDefaults];
+    //self.defaults =[NSUserDefaults standardUserDefaults];
     self.wirteJson;
 }
 
@@ -99,7 +98,7 @@
 }
 */
 
-
+/*
 -(void)deslogear{
     [self.defaults setValue:@"" forKey:@"name"];
     NSString *name = [_defaults valueForKey:@"name"];
@@ -108,4 +107,5 @@
         NSLog(@"Usuario deslogeado");
     }
 }
+*/
 @end

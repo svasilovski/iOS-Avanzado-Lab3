@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E51DDD221976E03004522D5 /* MenuLisado.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E51DDD121976E03004522D5 /* MenuLisado.m */; };
 		7E6FE005219704300039F252 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FE004219704300039F252 /* AppDelegate.m */; };
 		7E6FE008219704300039F252 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FE007219704300039F252 /* ViewController.m */; };
 		7E6FE00B219704300039F252 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6FE009219704300039F252 /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E51DDD021976E03004522D5 /* MenuLisado.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuLisado.h; sourceTree = "<group>"; };
+		7E51DDD121976E03004522D5 /* MenuLisado.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuLisado.m; sourceTree = "<group>"; };
 		7E6FE000219704300039F252 /* Laboratorio3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Laboratorio3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E6FE003219704300039F252 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7E6FE004219704300039F252 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E51DDCF21976DCE004522D5 /* Bar */ = {
+			isa = PBXGroup;
+			children = (
+				7E51DDD021976E03004522D5 /* MenuLisado.h */,
+				7E51DDD121976E03004522D5 /* MenuLisado.m */,
+			);
+			path = Bar;
+			sourceTree = "<group>";
+		};
 		7E6FDFF7219704300039F252 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +123,7 @@
 		7E6FE002219704300039F252 /* Laboratorio3 */ = {
 			isa = PBXGroup;
 			children = (
+				7E51DDCF21976DCE004522D5 /* Bar */,
 				7E6FE03821970B100039F252 /* Listado */,
 				7E6FE003219704300039F252 /* AppDelegate.h */,
 				7E6FE004219704300039F252 /* AppDelegate.m */,
@@ -293,6 +306,7 @@
 				7E6FE008219704300039F252 /* ViewController.m in Sources */,
 				7E6FE016219704320039F252 /* main.m in Sources */,
 				7E6FE005219704300039F252 /* AppDelegate.m in Sources */,
+				7E51DDD221976E03004522D5 /* MenuLisado.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
